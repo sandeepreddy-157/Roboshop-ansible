@@ -2,5 +2,5 @@
   hosts: all
   tasks:
     - name: print a message
-      ansible.module.debug:
+      ansible.builtin.debug:
         msg: hello san

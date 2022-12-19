@@ -22,7 +22,7 @@
 
 - name: Demo on vars from file play level
   hosts: localhost
-  var_files:
+  vars_files:
     - sample-var.yml
   tasks:
     - name: print URL

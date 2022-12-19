@@ -1,6 +1,7 @@
 ###https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html
 
-
+#ansible.builtin.debug - This module prints statements during execution and
+#can be useful for debugging variables or expressions without necessarily halting the playbook.
 - name: Demo on vars play level
   hosts: localhost
   vars:

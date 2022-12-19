@@ -5,7 +5,7 @@
 
 #
 - name: Demo on vars play level
-  hosts: localhost
+  hosts: all
   connection: local
   vars:
     URL: play.example.com
@@ -15,7 +15,7 @@
         msg: URL = {{URL}}
 
 - name: Demo on vars task level
-  hosts: localhost
+  hosts: all
   connection: local
 
   tasks:
@@ -26,7 +26,7 @@
         URL: task.example.com
 
 - name: Demo on vars from file play level
-  hosts: localhost
+  hosts: all
   connection: local
   vars_files:
     - sample-var.yml
@@ -36,7 +36,7 @@
         msg: URL = {{URL}}
 
 - name: Vars from inventory file
-  hosts: localhost
+  hosts: all
   connection: local
 
   tasks:

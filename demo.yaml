@@ -1,0 +1,6 @@
+- name: just a demo play
+  hosts: all
+  tasks:
+    - name: print a message
+      ansible.module.debug:
+        msg: hello san

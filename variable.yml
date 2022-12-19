@@ -2,8 +2,11 @@
 
 #ansible.builtin.debug - This module prints statements during execution and
 #can be useful for debugging variables or expressions without necessarily halting the playbook.
+
+#
 - name: Demo on vars play level
   hosts: localhost
+  connections: local
   vars:
     URL: play.example.com
   tasks:
@@ -13,6 +16,8 @@
 
 - name: Demo on vars task level
   hosts: localhost
+  connections: local
+
   tasks:
     - name: print URL
       ansible.builtin.debug:
@@ -22,8 +27,18 @@
 
 - name: Demo on vars from file play level
   hosts: localhost
+  connections: local
   vars_files:
     - sample-var.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+
+- name: Vars from inventory file
+  hosts: localhost
+  connections: local
+
   tasks:
     - name: print URL
       ansible.builtin.debug:

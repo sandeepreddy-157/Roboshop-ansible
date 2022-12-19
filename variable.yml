@@ -17,7 +17,6 @@
 - name: Demo on vars task level
   hosts: all
   connection: local
-
   tasks:
     - name: print URL
       ansible.builtin.debug:

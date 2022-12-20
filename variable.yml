@@ -60,6 +60,8 @@
         msg: hostname= {{ansible_hostname}}
 
 #ansible run-time variables
+#1. register (from a task output)
+#2. set_fact ( set a variable using task)
 
 - name: demo on run-time variables
   hosts: all

@@ -3,7 +3,7 @@
 #ansible.builtin.debug - This module prints statements during execution and
 #can be useful for debugging variables or expressions without necessarily halting the playbook.
 
-#
+#PLAY LEVEL VARIABLES
 - name: Demo on vars play level
   hosts: all
   connection: local
@@ -13,6 +13,8 @@
     - name: print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}
+
+#TASK LEVEL VARIABLES
 
 - name: Demo on vars task level
   hosts: all
@@ -24,6 +26,7 @@
       vars:
         URL: task.example.com
 
+#VARIABLES FROM A FILE
 - name: Demo on vars from file play level
   hosts: all
   connection: local
@@ -34,6 +37,7 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+#INVENTORY FILE VARIABLES
 - name: Vars from inventory file
   hosts: all
   connection: local
@@ -43,3 +47,12 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+#ANSIBLE PRE-DEFINED VARIABLES
+
+- name: pre-defined variables
+  hosts: all
+
+  tasks:
+    - name: print hostname
+      ansible.builtin.debug:
+        msg: hostname= {{ansible_hostname}}

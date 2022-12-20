@@ -58,3 +58,20 @@
     - name: print hostname
       ansible.builtin.debug:
         msg: hostname= {{ansible_hostname}}
+
+#ansible run-time variables
+
+- name: demo on run-time variables
+  hosts: all
+  connection: local
+
+  tasks:
+    - name: execute shell command
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: print out
+      ansible.builtin.debug:
+        msg: "{{out.stdout}}"
+
+

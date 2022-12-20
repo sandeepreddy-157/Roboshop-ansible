@@ -51,6 +51,7 @@
 
 - name: pre-defined variables
   hosts: all
+  connection: local
 
   tasks:
     - name: print hostname

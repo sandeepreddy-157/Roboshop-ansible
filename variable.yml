@@ -52,6 +52,7 @@
 - name: pre-defined variables
   hosts: all
   connection: local
+  gather_facts: false
 
   tasks:
     - name: print hostname

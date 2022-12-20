@@ -80,4 +80,13 @@
       ansible.builtin.debug:
         msg: "{{UPTIME}}"
 
+# ROLES
+
+- name: print vars from roles
+  hosts: all
+  connection: local
+
+  roles:
+    - sample
+
 

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ##### Change these values ###
 ZONE_ID="Z089812127OMAA4TA25OA"
 SG_NAME="allow-all"

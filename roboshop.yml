@@ -1,5 +1,5 @@
 - name: Run RoboShop Component
   hosts: all
-  become: yes
+  become: yes   #this will execute you as root user
   roles:
     - "{{ ROLE_NAME }}"
